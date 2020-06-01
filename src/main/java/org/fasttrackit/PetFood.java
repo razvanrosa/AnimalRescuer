@@ -2,9 +2,9 @@ package org.fasttrackit;
 
 import java.time.LocalDateTime;
 
-public class PetsFood {
+public class PetFood {
 
-    public PetsFood(String name){
+    public PetFood(String name){
         this.name = name;
     }
     String name;

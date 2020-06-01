@@ -10,15 +10,24 @@ public class AnimalRescuerGame {
 
         Vet vet = new Vet("Mark","General Practitioner");
 
-        Cat cat = new Cat ("Tom");
-
-        PetsFood food = new PetsFood("Akana");
+        PetFood food = new PetFood("Akana");
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your pet name!");
         String dogName = scanner.next();
         Dog dog = new Dog(dogName);
         System.out.println("Your pet name is: " + dog.name);
+
+        dog.bark = true;
+        dog.isBarking();
+
+        System.out.println("Enter your pet name!");
+        String catName = scanner.next();
+        Cat cat = new Cat(catName);
+        System.out.println("Your pet name is: " + cat.name);
+
+        cat.purrs = true;
+        cat.isPurrsing();
 
     }
 

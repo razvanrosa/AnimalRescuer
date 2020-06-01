@@ -1,6 +1,6 @@
 package org.fasttrackit;
 
-public class Pets {
+public class Pet {
 
     String name;
     String breed;
@@ -10,8 +10,9 @@ public class Pets {
     float height;
     String favoriteFood;
     String favoriteActivity;
-    int moral;
+    int moralLevel;
     int hungryLevel;
     int healtLevel;
+    boolean isAlive;
 
 }
