@@ -2,8 +2,8 @@ package org.fasttrackit;
 
 public class Dog extends Pet {
 
-    public Dog(String name){
-        this.name = name;
+    public Dog(String name,String breed){
+        super(name, breed);
     }
 
     boolean bark;
@@ -14,8 +14,5 @@ public class Dog extends Pet {
             System.out.println("Ham Ham!");
         }
     }
-
-
-
 
 }
