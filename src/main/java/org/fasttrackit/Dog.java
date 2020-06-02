@@ -2,12 +2,12 @@ package org.fasttrackit;
 
 public class Dog extends Pet {
 
+    boolean bark;
+    boolean bites;
+
     public Dog(String name,String breed){
         super(name, breed);
     }
-
-    boolean bark;
-    boolean bites;
 
     public void isBarking(){
         if(bark){

@@ -2,13 +2,14 @@ package org.fasttrackit;
 
 public class Pet {
 
+    String name;
+    String breed;
+
     public Pet(String name,String breed){
         this.name = name;
         this.breed = breed;
     }
 
-    String name;
-    String breed;
     String color;
     int age;
     double weight;
@@ -19,5 +20,7 @@ public class Pet {
     int hungryLevel = 5;
     int healtLevel = 5;
     boolean isAlive;
+
+
 
 }
