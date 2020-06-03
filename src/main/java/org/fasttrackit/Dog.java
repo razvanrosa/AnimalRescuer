@@ -5,8 +5,8 @@ public class Dog extends Pet {
     boolean bark;
     boolean bites;
 
-    public Dog(String name,String breed){
-        super(name, breed);
+    public Dog(String name,String breed,String favoriteFood,String favoriteActivity){
+        super(name, breed,favoriteFood,favoriteActivity);
     }
 
     public void isBarking(){

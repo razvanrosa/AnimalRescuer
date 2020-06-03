@@ -5,9 +5,11 @@ public class Pet {
     String name;
     String breed;
 
-    public Pet(String name,String breed){
+    public Pet(String name,String breed,String favoriteFood,String favoriteActivity){
         this.name = name;
         this.breed = breed;
+        this.favoriteFood = favoriteFood;
+        this.favoriteActivity = favoriteActivity;
     }
 
     String color;
@@ -20,7 +22,5 @@ public class Pet {
     int hungryLevel = 5;
     int healtLevel = 5;
     boolean isAlive;
-
-
 
 }

@@ -11,12 +11,24 @@ public class Player {
     }
 
     public void feedThePet(Pet pet,PetFood food){
-        pet.hungryLevel--;
+        if( food.name.equals(pet.favoriteFood)){
+            pet.hungryLevel--;
+            pet.moralLevel++;
+        }else {
+            pet.hungryLevel--;
+        }
         System.out.println(this.name + " " + "just gave some" + " " + food.name + " " + "to" + " " + pet.name);
+        System.out.println("Pet hungry level is: " + pet.hungryLevel);
+        System.out.println("Pet moral level is : " + pet.moralLevel);
     }
     public void playWithPet(RecreationActivity recreation,Pet pet){
-        pet.moralLevel++;
-        System.out.println("this.name" + " " + "is playing" + " " +recreation.name +" "+ "with" + " " + pet.name + "for" + " " +recreation.duration + " " + "minutes" );
+        if(recreation.name.equals(pet.favoriteActivity)){
+            pet.moralLevel = pet.moralLevel +2;
+        }else {
+            pet.moralLevel++;
+        }
+        System.out.println(this.name + " " + "is playing" + " " + recreation.name + " " + "with" + " " + pet.name + "for" + " " + recreation.duration + " " + "minutes");
+        System.out.println("Pet moral level is : " + pet.moralLevel);
     }
 
 }
