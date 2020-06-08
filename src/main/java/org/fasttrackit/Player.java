@@ -5,7 +5,23 @@ public class Player {
     String name;
     double availebleMoney;
 
-    public Player(String name,double availebleMoney){
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getAvailebleMoney() {
+        return availebleMoney;
+    }
+
+    public void setAvailebleMoney(double availebleMoney) {
+        this.availebleMoney = availebleMoney;
+    }
+
+    public Player(String name, double availebleMoney){
         this.name = name;
         this.availebleMoney = availebleMoney;
     }
