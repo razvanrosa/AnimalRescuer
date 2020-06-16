@@ -4,17 +4,17 @@ import java.time.LocalDateTime;
 
 public class PetFood {
 
-    public PetFood(String name,double price){
-        this.name = name;
-        this.price = price;
-    }
-
     String name;
     double price;
     String flavor;
     int quantity;
     int availableQuantity;
     LocalDateTime expireDate;
+
+    public PetFood(String name,double price){
+        this.name = name;
+        this.price = price;
+    }
 
     public String getName() {
         return name;

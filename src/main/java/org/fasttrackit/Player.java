@@ -5,22 +5,6 @@ public class Player {
     String name;
     double availebleMoney;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public double getAvailebleMoney() {
-        return availebleMoney;
-    }
-
-    public void setAvailebleMoney(double availebleMoney) {
-        this.availebleMoney = availebleMoney;
-    }
-
     public Player(String name, double availebleMoney){
         this.name = name;
         this.availebleMoney = availebleMoney;
@@ -45,6 +29,22 @@ public class Player {
         }
         System.out.println(this.name + " " + "is playing" + " " + recreation.name + " " + "with" + " " + pet.name + "for" + " " + recreation.duration + " " + "minutes");
         System.out.println("Pet moral level is : " + pet.moralLevel);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public double getAvailebleMoney() {
+        return availebleMoney;
+    }
+
+    public void setAvailebleMoney(double availebleMoney) {
+        this.availebleMoney = availebleMoney;
     }
 
 }

@@ -59,6 +59,9 @@ public class AnimalRescuerGame {
         player.feedThePet(dog,food);
         player.playWithPet(recreation,dog);
 
+        dog.petMoral();
+        cat.petMoral();
+
     }
 
 }

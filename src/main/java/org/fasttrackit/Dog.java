@@ -5,6 +5,21 @@ public class Dog extends Pet {
     boolean bark;
     boolean bites;
 
+    public Dog(String name, String breed, String favoriteFood, String favoriteActivity){
+        super(name, breed,favoriteFood,favoriteActivity);
+    }
+
+    public void isBarking(){
+        if(bark){
+            System.out.println("Ham Ham!");
+        }
+    }
+
+    @Override
+    public void petMoral(){
+        System.out.println(name + " Wags its tail !!");
+    }
+
     public boolean isBark() {
         return bark;
     }
@@ -19,16 +34,6 @@ public class Dog extends Pet {
 
     public void setBites(boolean bites) {
         this.bites = bites;
-    }
-
-    public Dog(String name, String breed, String favoriteFood, String favoriteActivity){
-        super(name, breed,favoriteFood,favoriteActivity);
-    }
-
-    public void isBarking(){
-        if(bark){
-            System.out.println("Ham Ham!");
-        }
     }
 
 }
