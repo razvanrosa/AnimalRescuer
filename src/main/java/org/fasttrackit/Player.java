@@ -1,13 +1,24 @@
 package org.fasttrackit;
 
+import java.util.Scanner;
+
 public class Player {
 
     String name;
-    double availebleMoney;
+    double availableMoney;
 
-    public Player(String name, double availebleMoney){
+    public Player(){
+    }
+
+    public Player(String name, double availableMoney){
         this.name = name;
-        this.availebleMoney = availebleMoney;
+        this.availableMoney = availableMoney;
+    }
+
+    public static void initPlayer(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your name and available money!");
+        Player player = new Player(scanner.next(),scanner.nextDouble());
     }
 
     public void feedThePet(Pet pet,PetFood food){
@@ -21,6 +32,7 @@ public class Player {
         System.out.println("Pet hungry level is: " + pet.hungryLevel);
         System.out.println("Pet moral level is : " + pet.moralLevel);
     }
+
     public void playWithPet(RecreationActivity recreation,Pet pet){
         if(recreation.name.equals(pet.favoriteActivity)){
             pet.moralLevel = pet.moralLevel +2;
@@ -39,12 +51,12 @@ public class Player {
         this.name = name;
     }
 
-    public double getAvailebleMoney() {
-        return availebleMoney;
+    public double getAvailableMoney() {
+        return availableMoney;
     }
 
-    public void setAvailebleMoney(double availebleMoney) {
-        this.availebleMoney = availebleMoney;
+    public void setAvailableMoney(double availableMoney) {
+        this.availableMoney = availableMoney;
     }
 
 }

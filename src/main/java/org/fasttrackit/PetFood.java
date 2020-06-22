@@ -1,8 +1,31 @@
 package org.fasttrackit;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 public class PetFood {
+
+    static List<PetFood> availableFood = new ArrayList<>();
+
+    public static void initAvailableFood(){
+        availableFood.add(new PetFood("Acanna",200));
+        availableFood.add(new PetFood("Taste Of The Wild", 250));
+        availableFood.add(new PetFood("Purina",150));
+        availableFood.add(new PetFood("Sheba",60));
+        availableFood.add(new PetFood("Friskies",17));
+        availableFood.add(new PetFood("Whiskas", 25));
+    }
+
+    public static void displayAvailableFood() {
+
+        System.out.println("Available food: ");
+        for (PetFood food : availableFood) {
+            if (food != null)
+                System.out.println("Pet food is: " + food.getName() + " And price is: " + food.getPrice());
+        }
+    }
 
     String name;
     double price;
@@ -15,6 +38,8 @@ public class PetFood {
         this.name = name;
         this.price = price;
     }
+
+
 
     public String getName() {
         return name;
@@ -62,5 +87,13 @@ public class PetFood {
 
     public void setExpireDate(LocalDateTime expireDate) {
         this.expireDate = expireDate;
+    }
+
+    public static List<PetFood> getAvailableFood() {
+        return availableFood;
+    }
+
+    public static void setAvailableFood(List<PetFood> availableFood) {
+        PetFood.availableFood = availableFood;
     }
 }
