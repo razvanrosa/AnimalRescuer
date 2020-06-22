@@ -15,6 +15,10 @@ public class Pet {
     int healtLevel = 5;
     boolean isAlive;
 
+    public Pet(){
+
+    }
+
     public Pet(String name,String breed,String favoriteFood,String favoriteActivity){
         this.name = name;
         this.breed = breed;

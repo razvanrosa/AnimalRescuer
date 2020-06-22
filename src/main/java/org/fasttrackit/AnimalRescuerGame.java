@@ -9,6 +9,9 @@ public class AnimalRescuerGame {
 
         Scanner scanner = new Scanner(System.in);
 
+        Pet pet = new Pet();
+
+
         System.out.println("Enter your name and available money!");
         Player player = new Player(scanner.next(),scanner.nextDouble());
 
@@ -29,15 +32,15 @@ public class AnimalRescuerGame {
         String dogFavoriteFood = scanner.next();
         System.out.println("[Dog] Enter your pet favorite activity!");
         String dogFavoriteActivity = scanner.next();
-        Dog dog = new Dog(dogName,dogBreed,dogFavoriteFood,dogFavoriteActivity);
+        Pet dog = new Dog(dogName,dogBreed,dogFavoriteFood,dogFavoriteActivity);
         System.out.println("[Dog] Your pet name is: " + dog.name);
         System.out.println("[Dog] Your pet breed is: " + dog.breed);
         System.out.println("[Dog] Your pet favorite food is: " + dog.favoriteFood);
         System.out.println("[Dog] Your pet favorite activity is: " + dog.favoriteActivity);
 
+        ((Dog) dog).bark = true;
+        ((Dog) dog).isBarking();
 
-        dog.bark = true;
-        dog.isBarking();
 
         System.out.println("[Cat] Enter your pet name!");
         String catName = scanner.next();
@@ -47,14 +50,14 @@ public class AnimalRescuerGame {
         String catFavoriteFood= scanner.next();
         System.out.println("[Cat] Enter your pet favorite activity!");
         String catFavoriteActivity= scanner.next();
-        Cat cat = new Cat(catName,catBreed,catFavoriteFood,catFavoriteActivity);
+        Pet cat = new Cat(catName,catBreed,catFavoriteFood,catFavoriteActivity);
         System.out.println("[Cat] Your pet name is: " + cat.name);
         System.out.println("[Cat] Your pet breed is: " + cat.breed);
         System.out.println("[Cat] Your pet favorite food is: " + cat.favoriteFood);
         System.out.println("[Cat] Your pet activity is: " + cat.favoriteActivity);
 
-        cat.purrs = true;
-        cat.isPurrsing();
+        ((Cat) cat).purrs = true;
+        ((Cat) cat).isPurrsing();
 
         player.feedThePet(dog,food);
         player.playWithPet(recreation,dog);
