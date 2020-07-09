@@ -10,12 +10,15 @@ public class PetFood {
     static List<PetFood> availableFood = new ArrayList<>();
 
     public static void initAvailableFood(){
-        availableFood.add(new PetFood("Acanna",200));
-        availableFood.add(new PetFood("Taste Of The Wild", 250));
-        availableFood.add(new PetFood("Purina",150));
-        availableFood.add(new PetFood("Sheba",60));
-        availableFood.add(new PetFood("Friskies",17));
-        availableFood.add(new PetFood("Whiskas", 25));
+
+        if(availableFood.isEmpty()) {
+            availableFood.add(new PetFood("Acanna", 200));
+            availableFood.add(new PetFood("Taste Of The Wild", 250));
+            availableFood.add(new PetFood("Purina", 150));
+            availableFood.add(new PetFood("Sheba", 60));
+            availableFood.add(new PetFood("Friskies", 17));
+            availableFood.add(new PetFood("Whiskas", 25));
+        }
     }
 
     public static void displayAvailableFood() {
@@ -23,7 +26,7 @@ public class PetFood {
         System.out.println("Available food: ");
         for (PetFood food : availableFood) {
             if (food != null)
-                System.out.println("Pet food is: " + food.getName() + " And price is: " + food.getPrice());
+                System.out.println(availableFood.indexOf(food) + 1 + ". Pet food is: " + food.getName() + " And price is: " + food.getPrice());
         }
     }
 

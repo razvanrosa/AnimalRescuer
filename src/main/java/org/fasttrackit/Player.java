@@ -10,15 +10,25 @@ public class Player {
     public Player(){
     }
 
-    public Player(String name, double availableMoney){
+    public Player(String name){
         this.name = name;
-        this.availableMoney = availableMoney;
     }
 
-    public static void initPlayer(){
+    public static Player initPlayer(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter your name and available money!");
-        Player player = new Player(scanner.next(),scanner.nextDouble());
+        System.out.println("Enter your name !");
+
+        Player player;
+        String playerName = "";
+
+        try{
+            playerName = scanner.next();
+        }catch (Exception exception){
+            System.out.println("You entered an invalid value! Try again.");
+            initPlayer();
+        }
+
+        return new Player(playerName);
     }
 
     public void feedThePet(Pet pet,PetFood food){
@@ -31,6 +41,8 @@ public class Player {
         System.out.println(this.name + " " + "just gave some" + " " + food.name + " " + "to" + " " + pet.name);
         System.out.println("Pet hungry level is: " + pet.hungryLevel);
         System.out.println("Pet moral level is : " + pet.moralLevel);
+        System.out.println("Pet moral level is : " + pet.moralLevel);
+
     }
 
     public void playWithPet(RecreationActivity recreation,Pet pet){
@@ -40,6 +52,8 @@ public class Player {
             pet.moralLevel++;
         }
         System.out.println(this.name + " " + "is playing" + " " + recreation.name + " " + "with" + " " + pet.name + "for" + " " + recreation.duration + " " + "minutes");
+        System.out.println("Pet moral level is : " + pet.moralLevel);
+        System.out.println("Pet hungry level is: " + pet.hungryLevel);
         System.out.println("Pet moral level is : " + pet.moralLevel);
     }
 

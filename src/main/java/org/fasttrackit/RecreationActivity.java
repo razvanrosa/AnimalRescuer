@@ -5,7 +5,7 @@ public class RecreationActivity {
     String name;
     int duration;
 
-    public static RecreationActivity[] recreationActivities = new RecreationActivity[4];
+    public static RecreationActivity[] recreationActivities;
 
     public RecreationActivity(){
 
@@ -17,29 +17,35 @@ public class RecreationActivity {
     }
 
     public static void initRecreationActivities(){
-        RecreationActivity recreationActivity1 = new RecreationActivity();
-        recreationActivity1.setName("Play with freisbee");
-        recreationActivity1.setDuration(30);
 
-        recreationActivities[0] = recreationActivity1;
+        if(recreationActivities == null) {
+            recreationActivities = new RecreationActivity[4];
 
-        RecreationActivity recreationActivity2 = new RecreationActivity();
-        recreationActivity2.setName("Walk in the forest");
-        recreationActivity2.setDuration(60);
+            RecreationActivity recreationActivity1 = new RecreationActivity();
+            recreationActivity1.setName("Play with freisbee");
+            recreationActivity1.setDuration(30);
 
-        recreationActivities[1] = recreationActivity2;
+            recreationActivities[0] = recreationActivity1;
 
-        RecreationActivity recreationActivity3 = new RecreationActivity();
-        recreationActivity3.setName("Play with toys");
-        recreationActivity3.setDuration(30);
+            RecreationActivity recreationActivity2 = new RecreationActivity();
+            recreationActivity2.setName("Walk in the forest");
+            recreationActivity2.setDuration(60);
 
-        recreationActivities[2] = recreationActivity3;
+            recreationActivities[1] = recreationActivity2;
 
-        RecreationActivity recreationActivity4 = new RecreationActivity();
-        recreationActivity4.setName("Go to swim");
-        recreationActivity4.setDuration(30);
+            RecreationActivity recreationActivity3 = new RecreationActivity();
+            recreationActivity3.setName("Play with toys");
+            recreationActivity3.setDuration(30);
 
-        recreationActivities[3] = recreationActivity4;
+            recreationActivities[2] = recreationActivity3;
+
+            RecreationActivity recreationActivity4 = new RecreationActivity();
+            recreationActivity4.setName("Go to swim");
+            recreationActivity4.setDuration(30);
+
+            recreationActivities[3] = recreationActivity4;
+
+        }
 
 
     }

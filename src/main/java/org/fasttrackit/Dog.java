@@ -7,6 +7,10 @@ public class Dog extends Pet {
     boolean bark;
     boolean bites;
 
+    public Dog() {
+
+    }
+
     public static Dog initDog(){
         Scanner scanner = new Scanner(System.in);
 
@@ -26,8 +30,17 @@ public class Dog extends Pet {
         return dog;
     }
 
+    public  static Dog createAdandonedDog(){
+       return new Dog("Spike", "boxer", "Taste Of The Wild","Walk in the forest");
+    }
+
+
     public Dog(String name, String breed, String favoriteFood, String favoriteActivity){
         super(name, breed,favoriteFood,favoriteActivity);
+    }
+
+    public Dog(String name){
+        this.name = name;
     }
 
     public void isBarking(){

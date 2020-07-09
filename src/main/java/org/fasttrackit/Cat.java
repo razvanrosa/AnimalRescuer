@@ -19,11 +19,15 @@ public class Cat extends Pet {
         System.out.println("[Cat] Enter your pet favorite activity!");
         String catFavoriteActivity = scanner.next();
         Cat cat = new Cat(catName,catBreed,catFavoriteFood,catFavoriteActivity);
-        System.out.println("[Dog] Your pet name is: " + cat.name);
-        System.out.println("[Dog] Your pet breed is: " + cat.breed);
-        System.out.println("[Dog] Your pet favorite food is: " + cat.favoriteFood);
-        System.out.println("[Dog] Your pet favorite activity is: " + cat.favoriteActivity);
+        System.out.println("[Cat] Your pet name is: " + cat.name);
+        System.out.println("[Cat] Your pet breed is: " + cat.breed);
+        System.out.println("[Cat] Your pet favorite food is: " + cat.favoriteFood);
+        System.out.println("[Cat] Your pet favorite activity is: " + cat.favoriteActivity);
         return cat;
+    }
+
+    public  static Cat createAdandonedCat(){
+        return new Cat("Tom", "siameza", "Whiskas","Play with toys");
     }
 
     public Cat(String name, String breed, String favoriteFood, String favoriteActivity){
